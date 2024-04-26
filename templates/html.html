@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tienda de Zapatos</title>
-  <link rel="stylesheet" href="diseño.css">
+  <link rel="stylesheet" href="/static/css/diseño.css">
+
+
 </head>
 <body>
   <header>
@@ -17,6 +19,9 @@
           <li><a href="#">Mujer</a></li>
           <li><a href="#">Niños</a></li>
           <li><a href="#">Contacto</a></li>
+
+          <button onclick="redirectToLogin()">Iniciar sesión</button>
+
         </ul>
       </nav>
     </div>
@@ -25,26 +30,46 @@
   <div class="container">
     <section class="productos">
       <h2>Zapatos Destacados</h2>
+
+
+      
+
+    <script>
+        function redirectToLogin() {
+            // Redirigir al usuario a la ruta que maneja la redirección en el backend
+            window.location.href = "/redirect_to_login";
+        }
+    </script>
+
+
+    <script>
+        function redirectToCart() {
+            // Redirigir al usuario a la ruta que maneja la redirección en el backend
+            window.location.href = "/redirect_to_cart";
+        }
+    </script>
+
+
       <div class="producto">
-        <img src="../sources/andres-jasso-PqbL_mxmaUE-unsplash.jpg" alt="Zapato 1">
+        <img src="../static/andres-jasso-PqbL_mxmaUE-unsplash.jpg" alt="Zapato 1">
         <h3>Zapato Elegante</h3>
         <p class="precio">$99.99</p>
-        <button>Agregar al Carrito</button>
+        <button onclick="redirectToCart()">Agregar al carrito</button>
       </div>
       <div class="producto">
-        <img src="../sources/maksim-larin-NOpsC3nWTzY-unsplash.jpg" alt="Zapato 2">
+        <img src="../static/maksim-larin-NOpsC3nWTzY-unsplash.jpg" alt="Zapato 2">
         <h3>Zapatillas Deportivas</h3>
         <p class="precio">$79.99</p>
         <button>Agregar al Carrito</button>
       </div>
       <div class="producto">
-        <img src="../sources/mnz-MHvwt4wicXI-unsplash.jpg" alt="Zapato 3">
+        <img src="../static/mnz-MHvwt4wicXI-unsplash.jpg" alt="Zapato 3">
         <h3>Zapato Casual</h3>
         <p class="precio">$59.99</p>
         <button>Agregar al Carrito</button>
       </div>
       <div class="producto">
-        <img src="../sources/joseph-barrientos-4qSb_FWhHKs-unsplash.jpg" alt="Zapato 4">
+        <img src="../static/joseph-barrientos-4qSb_FWhHKs-unsplash.jpg" alt="Zapato 4">
         <h3>Zapato Deportivo</h3>
         <p class="precio">$89.99</p>
         <button>Agregar al Carrito</button>
@@ -54,6 +79,7 @@
   </div>
 
   <footer>
+    <!-- El footer no se mueve, por lo que no deja ver el últiomo botón de "Agregar al carrito"-->
     <div class="container">
       <p>&copy; 2023 Dark Shoes</p>
     </div>
