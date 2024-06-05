@@ -1,0 +1,9 @@
+CREATE DATABASE users;
+USE users;
+
+CREATE TABLE about (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    names VARCHAR(100) NOT NULL,
+    emails VARCHAR(100) NOT NULL UNIQUE,
+    passwords VARCHAR(255) NOT NULL
+);
